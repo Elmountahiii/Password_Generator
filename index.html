@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <section class="mainSection">
+      <div class="AppTitle"><h1>Password Generator</h1></div>
+
+      <div class="Password-container">
+        <div class="input-box">
+          <input id="mainInput" type="text" disabled />
+
+          <ion-icon class="copyIcon" name="copy-outline"></ion-icon>
+        </div>
+
+        <div class="pass-strong"></div>
+
+        <div class="length-section">
+          <label class="title">Password length</label>
+
+          <span>6</span>
+        </div>
+        <input
+          class="rangeInput"
+          type="range"
+          min="1"
+          max="30"
+          value="6"
+          step="1"
+        />
+        <label class="title">Settings</label>
+        <div class="pass-settings">
+          <ul class="options">
+            <li class="option">
+              <input type="checkbox" id="lowerCase" checked />
+              <label for="lowerCase">LowerCase (a-z)</label>
+            </li>
+
+            <li class="option">
+              <input type="checkbox" id="UpperCase" />
+              <label for="UpperCase">UpperCase (A-Z)</label>
+            </li>
+
+            <li class="option">
+              <input type="checkbox" id="numbers" />
+              <label for="numbers">numbers (0-9)</label>
+            </li>
+
+            <li class="option">
+              <input type="checkbox" id="symbols" value="symbols" />
+              <label for="symbols">Symbols (!*$#)</label>
+            </li>
+
+            <li class="option">
+              <input type="checkbox" id="excluddup" />
+              <label for="excluddup">Exclude duplicate</label>
+            </li>
+
+            <li class="option">
+              <input type="checkbox" id="space" />
+              <label for="space">Include Space</label>
+            </li>
+          </ul>
+        </div>
+
+        <button>Generate Password</button>
+      </div>
+    </section>
+  </body>
+</html>
